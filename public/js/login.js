@@ -33,8 +33,8 @@ function validate(){
 
 
     function validate1() {
-        let regexp = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.]{2,4})+\.([A-Za-z]{2,3})$/;;
-        if (regexp.test(email.value)) {
+        // let regexp = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.]{2,4})+\.([A-Za-z]{2,3})$/;;
+        if (email.value.trim() == "admin" ){
             error1.innerHTML = "valid";
             error1.style.color = "green";
             email.style.borderColor = "yellow";
@@ -58,7 +58,7 @@ function validate(){
 
     function validate2() {
 
-        if (pwd.value.trim().length >= 7) {
+        if (pwd.value.trim() == "12345") {
             error2.innerHTML = "valid";
             error2.style.color = "green";
             pwd.style.borderColor = "yellow";
