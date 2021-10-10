@@ -52,7 +52,10 @@ app.get('/signup1',(req,res)=>{
     res.render("signup1"
       );
 });
-
+app.get('/sandeep',(req,res)=>{
+    res.render("sandeep"
+      );
+});
 
 app.listen(port,()=>{console.log("server ready at "+port )});
 
