@@ -9,7 +9,9 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
   <link rel="stylesheet" href="/css/signup1.css">
-  
+  <script src="https://kit.fontawesome.com/3c2b9b6e38.js" crossorigin="anonymous"></script>
+   
+
 
 </head>
 
@@ -26,12 +28,12 @@
   <div class="animated bounceInDown">
     <div class="container">
       <span class="error animated tada" id="msg"></span>
-      <form name="form1" action="/glass" class="box" onsubmit="return validate()">
+      <form name="form1" method="post" action="/signup1/add" class="box" onsubmit="return validate()">
         <h4>Admin<span>Dashboard</span></h4>
         <h5>Sign in to your account.</h5>
         <div class="">
-          <input type="text" class="form-control col-sm-11" placeholder="name" id="name" onkeyup="name1()">
-          <i style="color: lightgreen;" id="tick" hidden="true" class="fas fa-check-circle col-sm-1"></i>
+          <input type="text" name="name" class="form-control col-sm-11" placeholder="name" id="name" onkeyup="name1()">
+          <i style="color: lightgreen;" id="tick" hidden="true"  class="fas fa-check-circle col-sm-1"></i>
           <i style="color: red;" id="mistake" hidden="true" class="fas fa-times col-sm-1"></i>
 
 
@@ -40,88 +42,79 @@
         </div>
 
         <div class="">
-          <input type="text" name="email" placeholder="Email" id="email" onkeyup="validate1()">
+          <input type="text" name="username" placeholder="Email" id="email" onkeyup="validate1()">
 
           <i style="color: lightgreen;" id="tick1" hidden="true" class="fas fa-check-circle col-sm-1"></i>
-          <i style="color: red;" id="mistake1" hidden="true" class="fas fa-times col-sm-1"></i>
+          <i style="color: red;" id="mistake1" hidden="true"  class="fas fa-times col-sm-1"></i>
           <span> <label for="error1" input type="error" id="error1"></label></span>
 
         </div>
-       
+
         <div class="">
 
 
-          <input type="text" class="form-control col-sm-11" onkeyup="validate3(this.value)"
-              placeholder="Mobile number" id="number1">
+          <input type="text" name="number" class="form-control col-sm-11" onkeyup="validate3(this.value)"
+            placeholder="Mobile number" id="number1">
 
-          <i style="color: lightgreen;" id="tick2" hidden="true"
-              class="fas fa-check-circle col-sm-1"></i>
+          <i style="color: lightgreen;" id="tick2" hidden="true" class="fas fa-check-circle col-sm-1"></i>
           <i style="color: red;" id="mistake2" hidden="true" class="fas fa-times col-sm-1"></i>
           <label for="error2" input type="error2" id="error2"></label>
-      </div>
-      <div class="">
+        </div>
+        <div class="">
 
-        <input type="password" placeholder="Password" class="form-control col-sm-11" id="psw"
-                                    name="psw" onkeyup="sandeep(this.value)"
-                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
-                                <i style="color: lightgreen;" id="tick2" hidden="true"
-                                    class="fas fa-check-circle col-sm-1"></i>
-                                <i style="color: red;" id="mistake2" hidden="true" class="fas fa-times col-sm-1"></i>
-                                <div class="">
-                                  <input type="submit" id="enablebtn" class="btn1"
-                                      value="Signup">
-                              </div>
-                                <div class="form-group">
-                                    <div class="progress">
-                                        <div id="weak" hidden="true"
-                                            class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
-                                            role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                            style="width: 25%"></div>
-                                        <div id="medium" hidden="true"
-                                            class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
-                                            role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                            style="width: 50%"></div>
-                                        <div id="strong" hidden="true"
-                                            class="progress-bar bg-success progress-bar-striped progress-bar-animated"
-                                            role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                            style="width: 100%"></div>
-                                    </div>
+          <input type="password" name="password" placeholder="Password" class="form-control col-sm-11" id="psw"
+            name="psw" onkeyup="sandeep(this.value)"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+          <i style="color: lightgreen;" id="tick2" hidden="true" class="fas fa-check-circle col-sm-1"></i>
+          <i style="color: red;" id="mistake2" hidden="true" class="fas fa-times col-sm-1"></i>
+          <div class="">
+            <input type="submit" id="enablebtn" class="btn1" value="Signup">
+          </div>
+          <div class="form-group">
+            <div class="progress">
+              <div id="weak" hidden="true" class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+              <div id="medium" hidden="true" class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+              <div id="strong" hidden="true" class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
 
 
 
 
 
-                                </div>
+          </div>
 
-                                <div id="message">
-                                    <h3 style="color: aliceblue;">Password must contain the following:</h3>
-                                    <p id="letter" class="invalid">A lowercase letter</p>
-                                    <p id="capital" class="invalid">A capital (uppercase) letter</p>
-                                    <p id="number" class="invalid">A number</p>
-                                    <p id="length" class="invalid">Minimum 8 characters</p>
-                                    <p id="special" class="invalid"> Special characters</p>
-                                </div>
+          <div id="message">
+            <h3 style="color: aliceblue;">Password must contain the following:</h3>
+            <p id="letter" class="invalid">A lowercase letter</p>
+            <p id="capital" class="invalid">A capital (uppercase) letter</p>
+            <p id="number" class="invalid">A number</p>
+            <p id="length" class="invalid">Minimum 8 characters</p>
 
-
-                               
-                            </div>
+          </div>
 
 
 
+        </div>
 
 
-        
-      
-      <a href="/login1" class="dnthave">Already have an account?</a>
-    
-    <!-- <input type="submit" value="Sign in" class="btn1"> -->
-  </form>
-</div>
-    <div class="footer">
-     
-           
+
+
+
+
+
+        <a href="/login1" class="dnthave">Already have an account?</a>
+
+        <!-- <input type="submit" value="Sign in" class="btn1"> -->
+      </form>
     </div>
-    
+    <div class="footer">
+
+
+    </div>
+
   </div>
   <!-- partial -->
   <script src='https://cldup.com/S6Ptkwu_qA.js'></script>

@@ -441,7 +441,9 @@ body.light-mode .video-bg:before {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png"), linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+  background-image: url("https://t4.ftcdn.net/jpg/02/95/87/17/240_F_295871703_h0a5H4U1GR353AgFCRPROSplzC1N3GDa.jpg"), linear-gradient(to right top, #cf4af3, #0f030e, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 14px;
   padding: 20px 40px;
   margin-bottom: 30px;

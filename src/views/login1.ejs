@@ -25,11 +25,11 @@
   <div class="animated bounceInDown">
     <div class="container">
       <span class="error animated tada" id="msg"></span>
-      <form name="form1" action="/glass" class="box" onsubmit="return validate()">
+      <form name="form1" method="post"  action="/login1/add" class="box" onsubmit="return validate()">
         <h4>Admin<span>Dashboard</span></h4>
         <h5>Sign in to your account.</h5>
         <div class="">
-          <input type="text" name="admin" placeholder="admin" id="email" onkeyup="validate1()">
+          <input type="text" name="username" placeholder="admin" id="email" onkeyup="validate1()">
          
           <i style="color: lightgreen;" id="tick1" hidden="true"
               class="fas fa-check-circle col-sm-1"></i>
@@ -64,7 +64,7 @@
   </div>
   <!-- partial -->
   <script src='https://cldup.com/S6Ptkwu_qA.js'></script>
-  <script src="/js/login.js"></script>
+  <script src="/js/login.j"></script>
 
 </body>
 

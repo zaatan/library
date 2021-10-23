@@ -159,9 +159,9 @@
       </div>
       <div class="main-container">
         <div class="main-header">
-          <a class="menu-link-main" href="#">All Books</a>
+          <a class="menu-link-main" href="/glass">All Books</a>
           <div class="header-menu">
-            <a class="main-header-link is-active" href="#">Fiction Books</a>
+            <a class="main-header-link " href="#">Fiction Books</a>
             <a class="main-header-link" href="#">History </a>
             <a class="main-header-link" href="#">Cook Books</a>
 
@@ -170,11 +170,11 @@
         <div class="content-wrapper">
           
             <div class="row">
-                <form method="get" action="/glass/add">
-                        Title: <input type="text" name="name"><br>
+                <form method="post" action="/admin/add" enctype="multipart/form-data">
+                        Title: <input type="text" name="title"><br>
 
-                        Author: <input type="text" name="description"><br>
-                        Genre:<input type="text" name="Genre"><br>
+                        Author: <input type="text" name="author"><br>
+                        Genre:<input type="text" name="genre"><br>
 
                         Image: <input type="file" name="image">
                         <button type="submit">Add</button>
