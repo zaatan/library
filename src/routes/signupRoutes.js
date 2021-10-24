@@ -19,7 +19,7 @@ function router(nav) {
         var storing = Signupdata(item);
 
         storing.save(); // saving to database
-        res.redirect('/glass');
+        res.redirect('/login1');
 
     })
 

@@ -3,7 +3,7 @@ const mongoose =require ('mongoose');
 
 // for connecting database
 
-mongoose.connect('mongodb+srv://userone:userone@ictak.05key.mongodb.net/LIBRARYAPPS?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://usertwo:usertwo@ictak.05key.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority');
 
 // to create schema
 
